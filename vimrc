@@ -1,3 +1,10 @@
+" Call plugins
+call plug#begin('~/.vim/plugged')
+
+
+call plug#end()
+
+
 
 " first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
