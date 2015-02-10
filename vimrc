@@ -1,10 +1,10 @@
 " Call plugins
 call plug#begin('~/.vim/plugged')
 
+" solarized color scheme
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
-
-
 
 " first some settings copied from Debian config
 set nocompatible                        " no compatibility with old-skool vi
@@ -104,6 +104,13 @@ if has("gui_running")
   set showtabline=2
 
 endif
+
+" Colors!
+set background=dark
+try
+        colorscheme solarized
+catch
+endtry
 
 " enable filetype detection and indentation specific for filetype
 syntax on
