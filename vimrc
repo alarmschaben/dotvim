@@ -110,6 +110,7 @@ endif
 set background=dark
 try
         colorscheme solarized
+        let g:solarized_termcolors=256
 catch
 endtry
 
