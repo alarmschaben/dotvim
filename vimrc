@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " solarized color scheme
 Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -132,3 +133,8 @@ function! FileSize()
   endif
 endfunction
 
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
