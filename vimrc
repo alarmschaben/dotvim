@@ -141,5 +141,6 @@ let g:lightline = {
 " }}}
 
 " Key mappings {{{
-noremap <Esc><Esc> :nohlsearch<CR>
+noremap <Esc><Esc> :nohlsearch<CR> " Double Escape un-highlights search marks
+inoremap jj <Esc> " map jj in insert mode to ESC, saves from reaching for Esc itself
 " }}}
