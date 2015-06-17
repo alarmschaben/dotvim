@@ -135,10 +135,23 @@ function! FileSize()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+    \ 'active'       : {
+    \   'left' : [ [ 'mode', 'paste' ],
+    \              [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+    \   'right' : [ [ 'lineinfo' ],
+    \               [ 'percent' ],
+    \               [ 'fileformat', 'fileencoding', 'filetype' ] ] },
+    \ 'colorscheme'  : 'solarized',
+    \ 'separator'    : { 'left': '', 'right': '' },
+    \ 'subseparator' : { 'left': '', 'right': '' },
+    \ 'component'    : {
+    \   'fugitive' : '%{exists("*fugitive#head")?fugitive#head():""}',
+    \ },
+    \ 'component_visible_condition': {
+    \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())',
+    \ },
+    \ }
+set noshowmode " Remove superfluous mode indicator
 " }}}
 
 " Key mappings {{{
