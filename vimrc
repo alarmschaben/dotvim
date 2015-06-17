@@ -123,7 +123,11 @@ endtry
 syntax on
 filetype plugin indent on
 
-" Status line configuration {{{
+" Key mappings {{{
+noremap <Esc><Esc> :nohlsearch<CR> " Double Escape un-highlights search marks
+inoremap jj <Esc> " map jj in insert mode to ESC, saves from reaching for Esc itself
+
+" Settings for lightline {{{
 function! FileSize()
   let bytes = getfsize(expand("%:p"))
   if bytes <= 0
@@ -156,8 +160,6 @@ let g:lightline = {
 set noshowmode " Remove superfluous mode indicator
 " }}}
 
-" Key mappings {{{
-noremap <Esc><Esc> :nohlsearch<CR> " Double Escape un-highlights search marks
-inoremap jj <Esc> " map jj in insert mode to ESC, saves from reaching for Esc itself
+" Settings for NERDTree
 map <C-n> :NERDTreeToggle<CR> " Toggle NERDTree
 " }}}
