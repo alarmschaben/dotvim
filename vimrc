@@ -138,3 +138,8 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+" }}}
+
+" Key mappings {{{
+noremap <Esc><Esc> :nohlsearch<CR>
+" }}}
