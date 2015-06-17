@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -157,4 +159,5 @@ set noshowmode " Remove superfluous mode indicator
 " Key mappings {{{
 noremap <Esc><Esc> :nohlsearch<CR> " Double Escape un-highlights search marks
 inoremap jj <Esc> " map jj in insert mode to ESC, saves from reaching for Esc itself
+map <C-n> :NERDTreeToggle<CR> " Toggle NERDTree
 " }}}
