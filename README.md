@@ -12,3 +12,4 @@ to fetch the plugins and
 
 to upgrade vim-plug itself.
 
+A powerline-patched font is favourable, see [here](http://github.com/powerline/fonts) for some of them.
