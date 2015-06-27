@@ -58,6 +58,7 @@ set display=lastline                    " display wrapped lines at bottom instea
 
 if v:version > '702'
     set colorcolumn=80,120              " show a vertical line at these positions
+    let &colorcolumn=join(range(121,999),",")
 endif
 
 set diffopt+=iwhite                     " diff options: ignore whitespace
