@@ -2,3 +2,4 @@
 plugged/*
 autoload/plug.vim.old
 .netrwhist
+autoload/plug.vim.old
