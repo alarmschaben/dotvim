@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 " solarized color scheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'crusoexia/vim-monokai'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
@@ -21,7 +21,14 @@ set encoding=utf-8                      " by default set the encoding to UTF-8
 " then my own
 set nowrap                              " disable wrapping of text
 set number                              " show line numbers by default
+
+colorscheme monokai
 set t_Co=256                            " force the terminal to use 256 colors
+set termguicolors                       " use fancy background colors
+try
+    let g:monokai_term_italic = 1           " use italic font where possible
+endtry
+
 set showcmd                             " show the current command in the statusline
 set foldlevelstart=99                   " by default, open all folds
 set foldmethod=indent                   " indent fold method by default
@@ -111,14 +118,6 @@ if has("gui_running")
 
 endif
 
-" Colors!
-set background=dark
-try
-        colorscheme solarized
-        let g:solarized_termcolors=256
-        let g:solarized_termtrans=1
-catch
-endtry
 
 " enable filetype detection and indentation specific for filetype
 syntax on
@@ -149,7 +148,7 @@ let g:lightline = {
     \   'right' : [ [ 'lineinfo' ],
     \               [ 'percent' ],
     \               [ 'fileformat', 'fileencoding', 'filetype' ] ] },
-    \ 'colorscheme'  : 'solarized',
+    \ 'colorscheme'  : 'wombat',
     \ 'separator'    : { 'left': '', 'right': '' },
     \ 'subseparator' : { 'left': '', 'right': '' },
     \ 'component'    : {
