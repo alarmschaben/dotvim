@@ -7,6 +7,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/fugitive'
 
 call plug#end()
 
@@ -118,14 +121,16 @@ if has("gui_running")
 
 endif
 
-
 " enable filetype detection and indentation specific for filetype
 syntax on
 filetype plugin indent on
 
 " Key mappings {{{
+let mapleader=","
 noremap <Esc><Esc> :nohlsearch<CR> " Double Escape un-highlights search marks
 inoremap jj <Esc> " map jj in insert mode to ESC, saves from reaching for Esc itself
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <Space> za
 " }}}
 
 " Settings for lightline {{{
@@ -161,8 +166,9 @@ let g:lightline = {
 set noshowmode " Remove superfluous mode indicator
 " }}}
 
-" Settings for NERDTree
+" Settings for NERDTree {{{
 map <C-n> :NERDTreeToggle<CR> " Toggle NERDTree
 " }}}
+
 
 " vim: fdm=marker fdl=0
