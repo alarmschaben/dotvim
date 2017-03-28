@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/fugitive'
 
 call plug#end()
 
