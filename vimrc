@@ -2,13 +2,13 @@
 call plug#begin('~/.vim/plugged')
 
 " solarized color scheme
-Plug 'crusoexia/vim-monokai'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'danilo-augusto/vim-afterglow'
 
 call plug#end()
 
@@ -24,7 +24,7 @@ set encoding=utf-8                      " by default set the encoding to UTF-8
 set nowrap                              " disable wrapping of text
 set number                              " show line numbers by default
 
-colorscheme monokai
+colorscheme afterglow
 set t_Co=256                            " force the terminal to use 256 colors
 set termguicolors                       " use fancy background colors
 try
